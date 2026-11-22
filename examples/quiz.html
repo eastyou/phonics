@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自然拼读测验</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 20px;
+  background: #f2f5f8;
+  color: #1f2933;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  line-height: 1.65;
+}
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 30px 34px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(31, 41, 51, 0.08);
+}
+h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: 0.02em; }
+h2 { margin: 26px 0 10px; font-size: 20px; color: #17324d; }
+h3 { margin: 0 0 6px; font-size: 17px; }
+p { margin: 6px 0; }
+.meta { color: #627d98; font-size: 14px; margin-bottom: 18px; }
+.count { color: #829ab1; font-size: 13px; font-weight: 400; margin-left: 6px; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 18px; }
+th, td { border: 1px solid #cbd5e1; padding: 7px 10px; text-align: left; vertical-align: top; }
+th { background: #eef4fa; font-weight: 600; white-space: nowrap; }
+td.pattern, .pattern { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 18px; }
+.quiz { column-count: 2; column-gap: 28px; }
+.question { break-inside: avoid; page-break-inside: avoid; margin: 0 0 18px; padding: 0 0 10px; border-bottom: 1px dashed #d9e2ec; }
+.question .stem { font-weight: 600; margin: 0 0 8px; }
+.option { display: flex; gap: 8px; padding: 2px 0; font-size: 15px; }
+.letter { flex: 0 0 20px; font-weight: 700; color: #17324d; }
+.answers { page-break-before: always; break-before: page; }
+.answers td, .answers th { font-size: 14px; }
+.match-grid { display: flex; gap: 30px; align-items: flex-start; }
+.match-grid > div { flex: 1 1 0; }
+.match-grid ol, .match-grid ul { margin: 8px 0 0; padding-left: 24px; }
+.match-grid li { margin: 7px 0; }
+.bank { list-style: none; padding-left: 0; }
+.bank li { border: 1px solid #cbd5e1; border-radius: 999px; padding: 4px 12px; margin: 6px 0; background: #f8fafc; }
+.card { border: 3px solid #17324d; border-radius: 18px; padding: 34px; text-align: center; }
+.card .kind { color: #486581; letter-spacing: 0.3em; font-size: 14px; }
+.card .big { font-family: Georgia, "Times New Roman", serif; font-size: 92px; font-weight: 700; line-height: 1.1; margin: 10px 0 4px; color: #102a43; }
+.card .sound { font-size: 26px; color: #0b6e4f; margin: 0 0 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 16px 0; padding: 0; list-style: none; }
+.chips li { background: #e6f1f8; border-radius: 999px; padding: 7px 18px; font-size: 18px; }
+.card .note { color: #52606d; margin-top: 16px; font-size: 15px; }
+@page { size: A4; margin: 14mm; }
+@media print {
+  body { background: #ffffff; padding: 0; }
+  main { max-width: none; padding: 0; border-radius: 0; box-shadow: none; }
+  h2 { break-after: avoid; page-break-after: avoid; }
+  tr { break-inside: avoid; page-break-inside: avoid; }
+  .question { border-bottom: 1px solid #d9e2ec; }
+}
+</style>
+</head>
+<body>
+<main>
+<h1>自然拼读测验</h1>
+<p class="meta">共 10 题 · 四选一 · 姓名：__________　日期：__________</p>
+<section class="quiz">
+<article class="question">
+<p class="stem">1. 单词 “cross” 中属于「辅音连缀」的字母组合是？</p>
+<div class="option"><span class="letter">A</span><span>sp</span></div>
+<div class="option"><span class="letter">B</span><span>ur</span></div>
+<div class="option"><span class="letter">C</span><span>er</span></div>
+<div class="option"><span class="letter">D</span><span>cr</span></div>
+</article>
+<article class="question">
+<p class="stem">2. 单词 “fresh” 中属于「辅音连缀」的字母组合是？</p>
+<div class="option"><span class="letter">A</span><span>th</span></div>
+<div class="option"><span class="letter">B</span><span>fr</span></div>
+<div class="option"><span class="letter">C</span><span>bl</span></div>
+<div class="option"><span class="letter">D</span><span>u_e</span></div>
+</article>
+<article class="question">
+<p class="stem">3. 单词 “plus” 中属于「辅音连缀」的字母组合是？</p>
+<div class="option"><span class="letter">A</span><span>wh</span></div>
+<div class="option"><span class="letter">B</span><span>ow（/aʊ/）</span></div>
+<div class="option"><span class="letter">C</span><span>pl</span></div>
+<div class="option"><span class="letter">D</span><span>ea</span></div>
+</article>
+<article class="question">
+<p class="stem">4. 字母组合 u_e 通常读作？</p>
+<div class="option"><span class="letter">A</span><span>/aʊ/</span></div>
+<div class="option"><span class="letter">B</span><span>/æ/（短「哎」）</span></div>
+<div class="option"><span class="letter">C</span><span>/juː/（字母音 U）</span></div>
+<div class="option"><span class="letter">D</span><span>/eɪ/</span></div>
+</article>
+<article class="question">
+<p class="stem">5. 单词 “how” 中属于「元音组合」的字母组合是？</p>
+<div class="option"><span class="letter">A</span><span>pr</span></div>
+<div class="option"><span class="letter">B</span><span>sp</span></div>
+<div class="option"><span class="letter">C</span><span>ow（/aʊ/）</span></div>
+<div class="option"><span class="letter">D</span><span>sl</span></div>
+</article>
+<article class="question">
+<p class="stem">6. 单词 “chin” 中属于「辅音组合」的字母组合是？</p>
+<div class="option"><span class="letter">A</span><span>ay</span></div>
+<div class="option"><span class="letter">B</span><span>ph</span></div>
+<div class="option"><span class="letter">C</span><span>ch</span></div>
+<div class="option"><span class="letter">D</span><span>ee</span></div>
+</article>
+<article class="question">
+<p class="stem">7. 下列哪个单词包含字母组合 oi？</p>
+<div class="option"><span class="letter">A</span><span>point</span></div>
+<div class="option"><span class="letter">B</span><span>blast</span></div>
+<div class="option"><span class="letter">C</span><span>gloss</span></div>
+<div class="option"><span class="letter">D</span><span>five</span></div>
+</article>
+<article class="question">
+<p class="stem">8. 单词 “track” 中属于「辅音连缀」的字母组合是？</p>
+<div class="option"><span class="letter">A</span><span>sm</span></div>
+<div class="option"><span class="letter">B</span><span>ea</span></div>
+<div class="option"><span class="letter">C</span><span>bl</span></div>
+<div class="option"><span class="letter">D</span><span>tr</span></div>
+</article>
+<article class="question">
+<p class="stem">9. 单词 “skill” 中属于「辅音连缀」的字母组合是？</p>
+<div class="option"><span class="letter">A</span><span>sk</span></div>
+<div class="option"><span class="letter">B</span><span>pl</span></div>
+<div class="option"><span class="letter">C</span><span>e</span></div>
+<div class="option"><span class="letter">D</span><span>er</span></div>
+</article>
+<article class="question">
+<p class="stem">10. 字母组合 sl 通常读作？</p>
+<div class="option"><span class="letter">A</span><span>/sp/</span></div>
+<div class="option"><span class="letter">B</span><span>/oʊ/</span></div>
+<div class="option"><span class="letter">C</span><span>/sl/</span></div>
+<div class="option"><span class="letter">D</span><span>/ər/ 儿</span></div>
+</article>
+</section>
+<section class="answers">
+<h2>参考答案</h2>
+<table>
+<thead><tr><th>题号</th><th>选项</th><th>答案</th><th>解析</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>D</td><td>cr</td><td>“cross”中的 cr 读作 /kr/。</td></tr>
+<tr><td>2</td><td>B</td><td>fr</td><td>“fresh”中的 fr 读作 /fr/。</td></tr>
+<tr><td>3</td><td>C</td><td>pl</td><td>“plus”中的 pl 读作 /pl/。</td></tr>
+<tr><td>4</td><td>C</td><td>/juː/（字母音 U）</td><td>u_e 读作 /juː/（字母音 U）。例词：cube、cute、tube、mute、huge。</td></tr>
+<tr><td>5</td><td>C</td><td>ow（/aʊ/）</td><td>“how”中的 ow（/aʊ/） 读作 /aʊ/。</td></tr>
+<tr><td>6</td><td>C</td><td>ch</td><td>“chin”中的 ch 读作 /tʃ/ 吃。</td></tr>
+<tr><td>7</td><td>A</td><td>point</td><td>“point”包含 oi，读作 /ɔɪ/。</td></tr>
+<tr><td>8</td><td>D</td><td>tr</td><td>“track”中的 tr 读作 /tr/。</td></tr>
+<tr><td>9</td><td>A</td><td>sk</td><td>“skill”中的 sk 读作 /sk/。</td></tr>
+<tr><td>10</td><td>C</td><td>/sl/</td><td>sl 读作 /sl/。例词：slip、sled、slim、slot、slam。</td></tr>
+</tbody>
+</table>
+</section>
+</main>
+</body>
+</html>

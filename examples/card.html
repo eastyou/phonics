@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自然拼读卡片：a_e</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 20px;
+  background: #f2f5f8;
+  color: #1f2933;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  line-height: 1.65;
+}
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 30px 34px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(31, 41, 51, 0.08);
+}
+h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: 0.02em; }
+h2 { margin: 26px 0 10px; font-size: 20px; color: #17324d; }
+h3 { margin: 0 0 6px; font-size: 17px; }
+p { margin: 6px 0; }
+.meta { color: #627d98; font-size: 14px; margin-bottom: 18px; }
+.count { color: #829ab1; font-size: 13px; font-weight: 400; margin-left: 6px; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 18px; }
+th, td { border: 1px solid #cbd5e1; padding: 7px 10px; text-align: left; vertical-align: top; }
+th { background: #eef4fa; font-weight: 600; white-space: nowrap; }
+td.pattern, .pattern { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 18px; }
+.quiz { column-count: 2; column-gap: 28px; }
+.question { break-inside: avoid; page-break-inside: avoid; margin: 0 0 18px; padding: 0 0 10px; border-bottom: 1px dashed #d9e2ec; }
+.question .stem { font-weight: 600; margin: 0 0 8px; }
+.option { display: flex; gap: 8px; padding: 2px 0; font-size: 15px; }
+.letter { flex: 0 0 20px; font-weight: 700; color: #17324d; }
+.answers { page-break-before: always; break-before: page; }
+.answers td, .answers th { font-size: 14px; }
+.match-grid { display: flex; gap: 30px; align-items: flex-start; }
+.match-grid > div { flex: 1 1 0; }
+.match-grid ol, .match-grid ul { margin: 8px 0 0; padding-left: 24px; }
+.match-grid li { margin: 7px 0; }
+.bank { list-style: none; padding-left: 0; }
+.bank li { border: 1px solid #cbd5e1; border-radius: 999px; padding: 4px 12px; margin: 6px 0; background: #f8fafc; }
+.card { border: 3px solid #17324d; border-radius: 18px; padding: 34px; text-align: center; }
+.card .kind { color: #486581; letter-spacing: 0.3em; font-size: 14px; }
+.card .big { font-family: Georgia, "Times New Roman", serif; font-size: 92px; font-weight: 700; line-height: 1.1; margin: 10px 0 4px; color: #102a43; }
+.card .sound { font-size: 26px; color: #0b6e4f; margin: 0 0 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 16px 0; padding: 0; list-style: none; }
+.chips li { background: #e6f1f8; border-radius: 999px; padding: 7px 18px; font-size: 18px; }
+.card .note { color: #52606d; margin-top: 16px; font-size: 15px; }
+@page { size: A4; margin: 14mm; }
+@media print {
+  body { background: #ffffff; padding: 0; }
+  main { max-width: none; padding: 0; border-radius: 0; box-shadow: none; }
+  h2 { break-after: avoid; page-break-after: avoid; }
+  tr { break-inside: avoid; page-break-inside: avoid; }
+  .question { border-bottom: 1px solid #d9e2ec; }
+}
+</style>
+</head>
+<body>
+<main>
+<section class="card">
+<div class="kind">长元音</div>
+<div class="big">a_e</div>
+<div class="sound">/eɪ/（字母音 A）</div>
+<ul class="chips"><li>cake</li><li>name</li><li>lake</li><li>game</li><li>tape</li></ul>
+<p class="note">magic e：结尾的 e 不发音，前面的 a 读字母音。</p>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自然拼读规则表</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 20px;
+  background: #f2f5f8;
+  color: #1f2933;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  line-height: 1.65;
+}
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 30px 34px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(31, 41, 51, 0.08);
+}
+h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: 0.02em; }
+h2 { margin: 26px 0 10px; font-size: 20px; color: #17324d; }
+h3 { margin: 0 0 6px; font-size: 17px; }
+p { margin: 6px 0; }
+.meta { color: #627d98; font-size: 14px; margin-bottom: 18px; }
+.count { color: #829ab1; font-size: 13px; font-weight: 400; margin-left: 6px; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 18px; }
+th, td { border: 1px solid #cbd5e1; padding: 7px 10px; text-align: left; vertical-align: top; }
+th { background: #eef4fa; font-weight: 600; white-space: nowrap; }
+td.pattern, .pattern { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 18px; }
+.quiz { column-count: 2; column-gap: 28px; }
+.question { break-inside: avoid; page-break-inside: avoid; margin: 0 0 18px; padding: 0 0 10px; border-bottom: 1px dashed #d9e2ec; }
+.question .stem { font-weight: 600; margin: 0 0 8px; }
+.option { display: flex; gap: 8px; padding: 2px 0; font-size: 15px; }
+.letter { flex: 0 0 20px; font-weight: 700; color: #17324d; }
+.answers { page-break-before: always; break-before: page; }
+.answers td, .answers th { font-size: 14px; }
+.match-grid { display: flex; gap: 30px; align-items: flex-start; }
+.match-grid > div { flex: 1 1 0; }
+.match-grid ol, .match-grid ul { margin: 8px 0 0; padding-left: 24px; }
+.match-grid li { margin: 7px 0; }
+.bank { list-style: none; padding-left: 0; }
+.bank li { border: 1px solid #cbd5e1; border-radius: 999px; padding: 4px 12px; margin: 6px 0; background: #f8fafc; }
+.card { border: 3px solid #17324d; border-radius: 18px; padding: 34px; text-align: center; }
+.card .kind { color: #486581; letter-spacing: 0.3em; font-size: 14px; }
+.card .big { font-family: Georgia, "Times New Roman", serif; font-size: 92px; font-weight: 700; line-height: 1.1; margin: 10px 0 4px; color: #102a43; }
+.card .sound { font-size: 26px; color: #0b6e4f; margin: 0 0 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 16px 0; padding: 0; list-style: none; }
+.chips li { background: #e6f1f8; border-radius: 999px; padding: 7px 18px; font-size: 18px; }
+.card .note { color: #52606d; margin-top: 16px; font-size: 15px; }
+@page { size: A4; margin: 14mm; }
+@media print {
+  body { background: #ffffff; padding: 0; }
+  main { max-width: none; padding: 0; border-radius: 0; box-shadow: none; }
+  h2 { break-after: avoid; page-break-after: avoid; }
+  tr { break-inside: avoid; page-break-inside: avoid; }
+  .question { border-bottom: 1px solid #d9e2ec; }
+}
+</style>
+</head>
+<body>
+<main>
+<h1>自然拼读规则表</h1>
+<p class="meta">共 56 条规则，按分类整理，可直接打印张贴。</p>
+<section>
+<h2>短元音<span class="count">5 条</span></h2>
+<table>
+<thead><tr><th>字母组合</th><th>发音</th><th>例词</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td class="pattern">a</td><td>/æ/（短「哎」）</td><td>cat、map、bag、hat、jam</td><td>CVC 结构中的 a 通常读短音，如 cat。</td></tr>
+<tr><td class="pattern">e</td><td>/e/（短「诶」）</td><td>bed、pen、red、ten、hen</td><td>嘴形扁平、舌位中前，如 bed。</td></tr>
+<tr><td class="pattern">i</td><td>/ɪ/（短「衣」）</td><td>pig、sit、big、six、lip</td><td>短促的「衣」，不要拖成长音，如 pig。</td></tr>
+<tr><td class="pattern">o</td><td>/ɒ/（短「奥」）</td><td>dog、hot、box、mop、pot</td><td>英式短 o，嘴形圆，如 dog。</td></tr>
+<tr><td class="pattern">u</td><td>/ʌ/（短「啊」）</td><td>cup、bus、sun、run、mug</td><td>短促的「啊」，如 cup。</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>长元音<span class="count">4 条</span></h2>
+<table>
+<thead><tr><th>字母组合</th><th>发音</th><th>例词</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td class="pattern">a_e</td><td>/eɪ/（字母音 A）</td><td>cake、name、lake、game、tape</td><td>magic e：结尾的 e 不发音，前面的 a 读字母音。</td></tr>
+<tr><td class="pattern">i_e</td><td>/aɪ/（字母音 I）</td><td>bike、kite、time、five、ride</td><td>magic e：i 读字母音，如 bike。</td></tr>
+<tr><td class="pattern">o_e</td><td>/oʊ/（字母音 O）</td><td>home、nose、rope、bone、hope</td><td>magic e：o 读字母音，如 home。</td></tr>
+<tr><td class="pattern">u_e</td><td>/juː/（字母音 U）</td><td>cube、cute、tube、mute、huge</td><td>magic e：u 多读 /juː/，如 cube；少数词读 /uː/。</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>元音组合<span class="count">14 条</span></h2>
+<table>
+<thead><tr><th>字母组合</th><th>发音</th><th>例词</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td class="pattern">ai</td><td>/eɪ/</td><td>rain、tail、wait、mail、paint</td><td>ai 多出现在词中，如 rain；词尾常用 ay。</td></tr>
+<tr><td class="pattern">ay</td><td>/eɪ/</td><td>day、play、stay、may、gray</td><td>ay 多出现在词尾，如 day。</td></tr>
+<tr><td class="pattern">ee</td><td>/iː/</td><td>bee、tree、see、feet、green</td><td>ee 通常读长音「衣」，如 bee。</td></tr>
+<tr><td class="pattern">ea</td><td>/iː/</td><td>tea、sea、read、meat、eat</td><td>ea 常读长音「衣」，但 bread 等词读短音 /e/。</td></tr>
+<tr><td class="pattern">oa</td><td>/oʊ/</td><td>boat、coat、road、soap、goat</td><td>oa 常读字母音 O，如 boat。</td></tr>
+<tr><td class="pattern">ow</td><td>/oʊ/</td><td>snow、grow、show、low、yellow</td><td>ow 在 snow、grow 中读 /oʊ/；在 cow 中读 /aʊ/。</td></tr>
+<tr><td class="pattern">oo</td><td>/uː/</td><td>moon、food、zoo、room、boot</td><td>oo 在 moon 中读长音 /uː/。</td></tr>
+<tr><td class="pattern">oo（短）</td><td>/ʊ/</td><td>book、look、cook、good、foot</td><td>oo 在 book、good、foot 中读短音 /ʊ/，常见于 k、d 前。</td></tr>
+<tr><td class="pattern">ou</td><td>/aʊ/</td><td>out、loud、cloud、mouse、house</td><td>ou 常读 /aʊ/，如 out；在 you 中读 /uː/。</td></tr>
+<tr><td class="pattern">ow（/aʊ/）</td><td>/aʊ/</td><td>cow、how、now、town、brown</td><td>ow 在 cow、now 中读 /aʊ/，与 snow 的 /oʊ/ 不同。</td></tr>
+<tr><td class="pattern">oi</td><td>/ɔɪ/</td><td>coin、join、oil、soil、point</td><td>oi 多出现在词中，如 coin。</td></tr>
+<tr><td class="pattern">oy</td><td>/ɔɪ/</td><td>boy、toy、joy、enjoy、royal</td><td>oy 多出现在词尾，如 boy。</td></tr>
+<tr><td class="pattern">au</td><td>/ɔː/</td><td>sauce、pause、author、launch、audio</td><td>au 常读长音「奥」，如 sauce。</td></tr>
+<tr><td class="pattern">aw</td><td>/ɔː/</td><td>saw、paw、draw、straw、lawn</td><td>aw 常读长音「奥」，如 saw。</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>辅音组合<span class="count">9 条</span></h2>
+<table>
+<thead><tr><th>字母组合</th><th>发音</th><th>例词</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td class="pattern">sh</td><td>/ʃ/ 嘘</td><td>ship、shop、fish、wish、shell</td><td>sh 读「嘘」音，如 ship。</td></tr>
+<tr><td class="pattern">ch</td><td>/tʃ/ 吃</td><td>chip、chop、chin、lunch、chick</td><td>ch 常读「吃」音，如 chair；school 中读 /k/。</td></tr>
+<tr><td class="pattern">th</td><td>/θ/ 咬舌清音</td><td>thin、think、bath、math、thumb</td><td>舌尖轻触上齿，送气但不振动声带，如 thin。</td></tr>
+<tr><td class="pattern">th（浊）</td><td>/ð/ 咬舌浊音</td><td>this、that、then、them、these</td><td>舌尖轻触上齿，振动声带，如 this。</td></tr>
+<tr><td class="pattern">wh</td><td>/w/ 呜</td><td>when、what、whip、which、whim</td><td>wh 多读 /w/，如 when；who 中读 /h/。</td></tr>
+<tr><td class="pattern">ph</td><td>/f/ 夫</td><td>phone、photo、graph、dolphin、elephant</td><td>ph 读 /f/，多来自希腊语，如 phone。</td></tr>
+<tr><td class="pattern">ck</td><td>/k/ 克</td><td>duck、sock、kick、rock、black</td><td>ck 只出现在短元音后，如 duck。</td></tr>
+<tr><td class="pattern">ng</td><td>/ŋ/ 嗡</td><td>sing、ring、long、king、song</td><td>ng 是鼻音，如 sing；不要读成 /n/ 加 /g/。</td></tr>
+<tr><td class="pattern">nk</td><td>/ŋk/</td><td>bank、pink、trunk、sink、wink</td><td>nk 读 /ŋk/，如 bank。</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>辅音连缀<span class="count">19 条</span></h2>
+<table>
+<thead><tr><th>字母组合</th><th>发音</th><th>例词</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td class="pattern">bl</td><td>/bl/</td><td>blue、block、blush、blast、blend</td><td>b 与 l 快速连读，中间不要加元音。</td></tr>
+<tr><td class="pattern">cl</td><td>/kl/</td><td>clap、clock、climb、class、club</td><td>c 与 l 快速连读，如 clap。</td></tr>
+<tr><td class="pattern">fl</td><td>/fl/</td><td>flag、flap、flip、flat、floss</td><td>f 与 l 快速连读，如 flag。</td></tr>
+<tr><td class="pattern">gl</td><td>/gl/</td><td>glad、glass、glue、gloss、glum</td><td>g 与 l 快速连读，如 glad。</td></tr>
+<tr><td class="pattern">pl</td><td>/pl/</td><td>plan、plus、plant、plug、plum</td><td>p 与 l 快速连读，如 plan。</td></tr>
+<tr><td class="pattern">sl</td><td>/sl/</td><td>slip、sled、slim、slot、slam</td><td>s 与 l 快速连读，如 slip。</td></tr>
+<tr><td class="pattern">br</td><td>/br/</td><td>bring、brush、brick、brisk、brag</td><td>b 与 r 快速连读，如 bring。</td></tr>
+<tr><td class="pattern">cr</td><td>/kr/</td><td>crab、cry、cross、crash、crisp</td><td>c 与 r 快速连读，如 crab。</td></tr>
+<tr><td class="pattern">dr</td><td>/dr/</td><td>drum、dress、drop、dragon、drip</td><td>d 与 r 快速连读，如 drum。</td></tr>
+<tr><td class="pattern">fr</td><td>/fr/</td><td>frog、fresh、frost、frill、frank</td><td>f 与 r 快速连读，如 frog。</td></tr>
+<tr><td class="pattern">gr</td><td>/gr/</td><td>grass、grab、grand、grin、grill</td><td>g 与 r 快速连读，如 grass。</td></tr>
+<tr><td class="pattern">pr</td><td>/pr/</td><td>print、press、prop、prep、prim</td><td>p 与 r 快速连读，如 print。</td></tr>
+<tr><td class="pattern">tr</td><td>/tr/</td><td>try、truck、trip、track、trash</td><td>t 与 r 快速连读，如 try。</td></tr>
+<tr><td class="pattern">st</td><td>/st/</td><td>stop、step、stick、stamp、stump</td><td>s 与 t 快速连读，如 stop。</td></tr>
+<tr><td class="pattern">sp</td><td>/sp/</td><td>spin、spot、spill、spell、spend</td><td>s 与 p 快速连读，如 spin。</td></tr>
+<tr><td class="pattern">sk</td><td>/sk/</td><td>skip、sky、skin、skill、skull</td><td>s 与 k 快速连读，如 skip。</td></tr>
+<tr><td class="pattern">sm</td><td>/sm/</td><td>small、smell、smart、smash、smog</td><td>s 与 m 快速连读，如 small。</td></tr>
+<tr><td class="pattern">sn</td><td>/sn/</td><td>snap、snack、sniff、snug、snub</td><td>s 与 n 快速连读，如 snap。</td></tr>
+<tr><td class="pattern">sw</td><td>/sw/</td><td>swim、swan、swing、swift、swell</td><td>s 与 w 快速连读，如 swim。</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>r 控制<span class="count">5 条</span></h2>
+<table>
+<thead><tr><th>字母组合</th><th>发音</th><th>例词</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td class="pattern">ar</td><td>/ɑːr/ 啊儿</td><td>car、star、farm、park、hard</td><td>ar 常读 /ɑːr/，如 car。</td></tr>
+<tr><td class="pattern">er</td><td>/ər/ 儿</td><td>her、teacher、sister、dinner、water</td><td>er 在词尾常读弱化的 /ər/，如 sister。</td></tr>
+<tr><td class="pattern">ir</td><td>/ɜːr/</td><td>bird、girl、shirt、skirt、first</td><td>ir 常读 /ɜːr/，如 bird。</td></tr>
+<tr><td class="pattern">or</td><td>/ɔːr/</td><td>fork、horse、corn、short、storm</td><td>or 常读 /ɔːr/，如 fork。</td></tr>
+<tr><td class="pattern">ur</td><td>/ɜːr/</td><td>turn、burn、hurt、nurse、purple</td><td>ur 常读 /ɜːr/，如 turn。</td></tr>
+</tbody>
+</table>
+</section>
+</main>
+</body>
+</html>
